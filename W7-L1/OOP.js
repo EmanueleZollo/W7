@@ -39,3 +39,20 @@ class Pet {
     }
   }
 }
+document.getElementById("key").addEventListener("click", function () {
+  let petName = document.getElementById("petName").value;
+  let ownerName = document.getElementById("ownerName").value;
+  let species = document.getElementById("species").value;
+  let breed = document.getElementById("breed").value;
+
+  document.getElementById("animal-list").innerHTML = `<ul class="myList"></ul>`;
+  const item = document.createElement("li");
+  item.appendChild(petName);
+  document.querySelector(".myList").appendChild(item);
+  item.appendChild(ownerName);
+  document.querySelector(".myList").appendChild(item);
+  item.appendChild(species);
+  document.querySelector(".myList").appendChild(item);
+  item.appendChild(breed);
+  document.querySelector(".myList").appendChild(item);
+});
